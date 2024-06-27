@@ -1,4 +1,4 @@
-# Charting App
+# Chat App
 
 ##Frontend Setup
 
