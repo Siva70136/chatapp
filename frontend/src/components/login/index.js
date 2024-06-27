@@ -23,7 +23,7 @@ const Login = (props) => {
             body: JSON.stringify(formData),
         }
         try {
-            const res = await fetch('https://chatapp-kryh.onrender.com/login', options);
+            const res = await fetch('https://chatapp-1-xxay.onrender.com/login', options);
             const data = await res.json();
             //console.log(data);
             Cookies.set('jwt_token', data.token, { expires: 30, path: '/' });

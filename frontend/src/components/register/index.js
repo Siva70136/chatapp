@@ -24,7 +24,7 @@ const Register = () => {
         }
         //console.log(options);
         
-        const res = await fetch('https://chatapp-kryh.onrender.com/register', options);
+        const res = await fetch('https://chatapp-1-xxay.onrender.com/register', options);
         const data = await res.json();
         //console.log(data);
         setEmail('');

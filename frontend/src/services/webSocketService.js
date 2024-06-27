@@ -1,7 +1,7 @@
 let socket;
 
 export const connect = (token) => {
-    socket = new WebSocket(`wss://chatapp-kryh.onrender.com/?token=${token}`);
+    socket = new WebSocket(`wss://chatapp-1-xxay.onrender.com/?token=${token}`);
     //console.log(socket);
     socket.onopen = () => {
         console.log('WebSocket connected');
