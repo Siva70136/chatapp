@@ -23,9 +23,10 @@ const Register = () => {
             body: JSON.stringify(formData),
         }
         //console.log(options);
-        const res = await fetch('http://localhost:4000/register', options);
+        
+        const res = await fetch('https://chatapp-kryh.onrender.com/register', options);
         const data = await res.json();
-        console.log(data);
+        //console.log(data);
         setEmail('');
         setPassword('');
         setUserName('');

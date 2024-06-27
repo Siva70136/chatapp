@@ -1,0 +1,49 @@
+.chat-app-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
+}
+
+.chat-container {
+    align-self: flex-end;
+    width: 400px;
+}
+.message {
+    margin-bottom: 20px;
+}
+
+.message1 {
+    text-align: right;
+}
+
+.message2 {
+    text-align: left;
+}
+
+.message-input {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.message-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e91e63;
+    color: white;
+    cursor: pointer;
+}

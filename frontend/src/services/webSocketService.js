@@ -1,7 +1,8 @@
 let socket;
 
 export const connect = (token) => {
-    socket = new WebSocket(`ws://localhost:4000/?token=${token}`);
+    socket = new WebSocket(`wss://chatapp-kryh.onrender.com/?token=${token}`);
+    //console.log(socket);
     socket.onopen = () => {
         console.log('WebSocket connected');
     };
@@ -26,7 +27,7 @@ export const onMessage = (callback) => {
         socket.onmessage = (event) => {
             try {
                 const message = JSON.parse(event.data);
-                console.log('Received message:', message);
+                //console.log('Received message:', message);
                 callback(message);
             } catch (error) {
                 console.error('Error parsing JSON:', error);

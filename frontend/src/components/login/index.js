@@ -7,7 +7,7 @@ const Login = (props) => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    console.log(props);
+    //console.log(props);
 
     const login = async (e) => {
         e.preventDefault();
@@ -23,7 +23,7 @@ const Login = (props) => {
             body: JSON.stringify(formData),
         }
         try {
-            const res = await fetch('http://localhost:4000/login', options);
+            const res = await fetch('https://chatapp-kryh.onrender.com/login', options);
             const data = await res.json();
             //console.log(data);
             Cookies.set('jwt_token', data.token, { expires: 30, path: '/' });

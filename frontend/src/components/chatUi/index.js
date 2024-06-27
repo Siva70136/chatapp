@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { connect, sendMessage, onMessage } from '../../services/webSocketService';
 import Cookies from 'js-cookie';
+import './index.css';
 
-const ChatUi = ({token}) => {
+const ChatUi = ({ token }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const user = Cookies.get('user');
   useEffect(() => {
-    console.log(token);
+    //console.log(token);
     if (token) {
       connect(token);
 
@@ -17,7 +18,7 @@ const ChatUi = ({token}) => {
     }
   }, [token]);
 
-  console.log(messages);
+  //console.log(messages);
   const handleSend = () => {
     if (message.trim() === '') return;
 
@@ -26,26 +27,35 @@ const ChatUi = ({token}) => {
       timestamp: new Date(),
       username: user,
     };
-    
     sendMessage(msg);
     setMessage('');
   };
 
   return (
-    <div>
-      {messages.length !== 0 && <div id="chat">
-        {messages.map((msg, index) => (
-          <div key={index}>
-            {msg.username} {new Date(msg.timestamp).toLocaleTimeString()}: {msg.text}
+    <div className='chat-app-container'>
+      <div className='chat-container'>
+        <div className='messages'>
+          {messages.length !== 0 && <div id="chat">
+            {messages.map((msg, index) => (
+              <div key={index} className={`message ${index % 2 === 0 ? 'message1' : 'message2'}`}>
+                {msg.username} {new Date(msg.timestamp).toLocaleTimeString()}: {msg.text}
+              </div>
+            ))}
+          </div>}
+        </div>
+        <div className='message-input'>
+          <input
+            type="text"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder='Enter Message'
+            className='input form-control'
+          />
+          <div>
+            <button type='button' onClick={handleSend} className='button'>Send</button>
           </div>
-        ))}
-      </div>}
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
-      <button onClick={handleSend}>Send</button>
+        </div>
+      </div>
     </div>
   );
 };
