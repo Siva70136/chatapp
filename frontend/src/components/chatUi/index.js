@@ -28,6 +28,7 @@ const ChatUi = ({ token }) => {
       username: user,
     };
     sendMessage(msg);
+    setMessages((prevMessages) => [...prevMessages, msg]);
     setMessage('');
   };
 
