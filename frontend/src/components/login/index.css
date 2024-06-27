@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    box-shadow: 0px 0px 0px 2px rgb(233, 232, 232);
+    width: 300px;
+    max-width: 400px;
+}
+
+.form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.textHead {
+    font-weight: bold;
+    color: #e91e63;
+    font-size: 28px;
+    line-height: 5px;
+}
+
+.label-data {
+    font-size: 14px;
+    color: #666667;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-left: 9px;
+    line-height: 20px;
+}
+
+.input {
+    border-radius: 15px;
+    width: auto;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid rgb(110, 110, 110);
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.button {
+    background-color: #e91e63;
+    border-width: 0px;
+    border-radius: 18px;
+    width: 100%;
+    padding: 8px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.label-check {
+    height: 15px;
+    width: 15px;
+}
+
+.heading {
+    font-size: 20px;
+    text-align: center;
+}
+
+.no-account {
+    margin: auto;
+}
